@@ -189,6 +189,8 @@ impl RaylibBuilder {
             flags |= FLAG_VSYNC_HINT as u32;
         }
         flags |= FLAG_WINDOW_MOUSE_PASSTHROUGH as u32;
+        flags |= FLAG_WINDOW_TOPMOST as u32;
+
 
         unsafe {
             ffi::SetConfigFlags(flags as u32);
